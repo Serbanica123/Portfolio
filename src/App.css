@@ -1,8 +1,8 @@
 #root {
-  max-width: 150%;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
   text-align: center;
+  justify-items: center;
+  display: flex;
 }
 
 .card {

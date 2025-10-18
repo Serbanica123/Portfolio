@@ -1,0 +1,12 @@
+.sectionAbout{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+.profileImg{
+    display:flex;
+    border-radius: 100%;
+    border: 10px;
+    border-color: white;
+    
+}
