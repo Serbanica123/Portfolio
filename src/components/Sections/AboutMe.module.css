@@ -10,7 +10,7 @@
     border-radius: 100%;
     border: 10px;
     border-color: white;
-
+    padding: 30px;
 }
 
 .contactList {
@@ -57,9 +57,10 @@
 
 .aboutText {
     display: inline-block;
+    font-size: 20px;
 }
 
 .aboutText p {
-    text-align: left;
-    padding-left: 0px;
+    text-align: justify;
+    padding-left: 20px;
 }
