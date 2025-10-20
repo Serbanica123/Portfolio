@@ -1,0 +1,65 @@
+.sectionAbout {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    margin: 0 50px 0 50px;
+}
+
+.profileImg {
+    display: flex;
+    border-radius: 100%;
+    border: 10px;
+    border-color: white;
+
+}
+
+.contactList {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    padding: 0 0 0 0;
+    height: 100px;
+}
+
+.contactList li {
+    display: flex;
+    margin: auto;
+
+}
+
+.contactList li a svg {
+    display: flex;
+    width: 40px;
+    height: 100%;
+    align-items: center;
+    color: rgba(216, 54, 54, 0.603);
+}
+
+.phoneLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: rgba(216, 54, 54, 0.603);
+}
+
+.phoneLink div {
+    font-size: 30px;
+    color: rgba(216, 54, 54, 0.603);
+}
+
+.mainList {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.aboutText {
+    display: inline-block;
+}
+
+.aboutText p {
+    text-align: left;
+    padding-left: 0px;
+}

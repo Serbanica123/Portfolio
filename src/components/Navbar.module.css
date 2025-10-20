@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(145deg, #0F1217, #0A0E12);
+    background: linear-gradient(145deg, rgba(216, 54, 54, 0.603), rgba(104, 24, 24, 0.603));
     box-shadow: 0 2px 6px rgba(0,0,0,0.6);
     z-index: 1000;
     align-items: center;
@@ -59,10 +59,10 @@
 }
 
 .right li:hover {
-  background-color: #12171F;           /* slightly lighter/different dark metallic shade */
-  color: #E0E0E0;                      /* text stays light */
-  border: 1px solid #2A3B4D;           /* metallic border */
-  box-shadow: 0 0 6px #555555, 0 0 12px #55555533; /* subtle LED glow */
-  transition: all 0.3s ease-in;    /* smooth hover effect */
+  background-color: rgba(216, 54, 54, 0.616); 
+  color: #E0E0E0;         
+  border: 1px solid #2A3B4D; 
+  box-shadow: 0 0 6px #555555, 0 0 12px #55555533;
+  transition: all 0.2s ease-in;
 }
 
