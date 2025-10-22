@@ -7,6 +7,7 @@ import Experience from './components/Sections/WorkExperience'
 import Contact from './components/Sections/Contact'
 import Projects from './components/Sections/Projects'
 import Hobbies from './components/Sections/Hobbies'
+
 function App() {
   const [count, setCount] = useState(0)
 

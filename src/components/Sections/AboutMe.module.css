@@ -1,16 +1,16 @@
+@import '../../variables.css';
 .sectionAbout {
     display: flex;
     width: 100%;
-    justify-content: right;
-    margin: 0 50px 0 50px;
 }
 
 .profileImg {
-    display: flex;
     border-radius: 100%;
     border: 10px;
-    border-color: white;
-    padding: 30px;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 450px;
 }
 
 .contactList {
@@ -18,7 +18,7 @@
     list-style: none;
     display: flex;
     padding: 0 0 0 0;
-    height: 100px;
+    height: 50px;
 }
 
 .contactList li {
@@ -32,21 +32,7 @@
     width: 40px;
     height: 100%;
     align-items: center;
-    color: rgba(216, 54, 54, 0.603);
-}
-
-.phoneLink {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: rgba(216, 54, 54, 0.603);
-}
-
-.phoneLink div {
-    font-size: 30px;
-    color: rgba(216, 54, 54, 0.603);
+    color: var(--bg-section);
 }
 
 .mainList {
@@ -56,11 +42,20 @@
 }
 
 .aboutText {
-    display: inline-block;
     font-size: 20px;
+    padding-right: 20px;
 }
 
 .aboutText p {
     text-align: justify;
-    padding-left: 20px;
+}
+
+.openToWork
+{
+    border-radius: 5px;
+    margin: 2px;
+    width: 90%;
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    text-align: center;
 }

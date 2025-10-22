@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../Sections/AboutMe.module.css"
 import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
+
 import SkillBars from "../Skills";
 const about = {
     img: "src\\assets\\ProfilePicture.png",
@@ -12,6 +12,20 @@ const about = {
         facebook: <a href="https://www.facebook.com/alex.serban.1804"><FaFacebookF /></a>,
     }
 }
+
+const openToWorkRoles = [
+    "Robotics Engineer",
+    "Mechatronics Engineer",
+    "Automation Engineer",
+    "Control Systems Engineer",
+    "Embedded Systems Engineer",
+    "Simulation Engineer (ROS/Isaac Sim)",
+    "Computer Vision Engineer",
+    "Mechanical Design Engineer (CAD/SolidWorks)",
+    "3D Printing & Prototyping Specialist",
+    "PLC Programmer"
+];
+
 
 function AboutText() {
     return (<div className={styles.aboutText}>
@@ -49,6 +63,14 @@ function Profile() {
                     ))}</ul>
                 </div>
             </li>
+            <li>
+                <div>
+                    <ul style={{listStyle:'none', padding:"0", alignItems: 'center'}}>
+                        <li><h1 style={{fontSize: '30px', textAlign:"center"}}>Open to work</h1></li>
+                        {openToWorkRoles.map((role, id) => (<li style={{display: 'flex', justifyContent: 'center', marginBottom: '10px'}} key={id}><div className={styles.openToWork}>{role}</div></li>))}
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>)
 }
@@ -57,13 +79,18 @@ export default function AboutMe() {
     return (
         <>
             <section className={styles.sectionAbout} id="about">
-                <ul style={{listStyle:'none'}}>
-                    <li><AboutText /></li>
-                    <li><SkillBars/></li>
-                </ul>
-                
-                <Profile />
-                
+                <div style={{ display: "flex" }}>
+                    <div style={{ flex: '65%' }}>
+                        <ul style={{ listStyle: 'none' }}>
+                            <li><AboutText /></li>
+                            <li><SkillBars /></li>
+                        </ul>
+                    </div>
+
+                    <Profile style={{ flex: '35%' }} />
+                </div>
+
+
             </section>
         </>
 

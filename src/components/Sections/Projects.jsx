@@ -1,6 +1,7 @@
 import Project from "../Project"
 import styles from "../Sections/Projects.module.css";
-import {getImages} from "../Project"
+import { getImages } from "../Project";
+
 const projects = [
     {
         title: "Sample Project",
