@@ -32,25 +32,37 @@ function ImgCarousel({ images }) {
     const imageNumber = images.length;
 
     return (
-        <div className={styles.carouselContainer}>
-            <img
-                src={images[currentPos]}
-                alt={`Project ${currentPos}`}
-                className={styles.carouselImage}
-            />
-            <button
-                className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
-                onClick={() => setCurrentPos(decrementImage(currentPos, imageNumber))}
-            >
-                ❮
-            </button>
-            <button
-                className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
-                onClick={() => setCurrentPos(incrementImage(currentPos, imageNumber))}
-            >
-                ❯
-            </button>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div className={styles.carouselContainer}>
+                <img
+                    src={images[currentPos]}
+                    alt={`Project ${currentPos}`}
+                    className={styles.carouselImage}
+                />
+                <button
+                    className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
+                    onClick={() => setCurrentPos(decrementImage(currentPos, imageNumber))}
+                >
+                    ❮
+                </button>
+                <button
+                    className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
+                    onClick={() => setCurrentPos(incrementImage(currentPos, imageNumber))}
+                >
+                    ❯
+                </button>
+            </div>
+            <div style={{ width: '100%', alignItems: 'center' }}>
+                <p>{decodeURIComponent(
+                    images[currentPos]
+                        .split('/')        
+                        .pop()             
+                        .replace(/\.[^/.]+$/, '') 
+                )}</p>
+
+            </div>
         </div>
+
     );
 }
 
@@ -71,7 +83,7 @@ export default function Project({ project = mockProject }) {
                             )}
                         </p>
                     </div>
-                    <div style={{display:'flex', alignItems: 'center', height: '100%'}}>
+                    <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                         <ImgCarousel images={project.images} />
 
                     </div>
