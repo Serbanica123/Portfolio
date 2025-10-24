@@ -4,7 +4,7 @@ import styles from "./Project.module.css";
 
 const projectImages = {
     "Sample Project": Object.values(import.meta.glob('../assets/Sample Project/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Another Project": Object.values(import.meta.glob('../assets/Another Project/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "Digital Twin": Object.values(import.meta.glob('../assets/Digital Twin/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
 };
 
 export function getImages(projectName) {
@@ -70,18 +70,22 @@ export default function Project({ project = mockProject }) {
                                 </a>
                             )}
                         </p>
-                        <div>
-                            <p style={{ marginBottom: '5px' }}>Skills and Technologies:</p>
-                            <ul className={styles.skillsList}>
-                                {project.skills.map((skill, id) => (
-                                    <li key={id} className={styles.skillItem}>{skill}</li>
-                                ))}
-                            </ul>
-                        </div>
                     </div>
-                    <ImgCarousel images={project.images} />
+                    <div style={{display:'flex', alignItems: 'center', height: '100%'}}>
+                        <ImgCarousel images={project.images} />
+
+                    </div>
+                </div>
+                <div>
+                    <p style={{ marginBottom: '5px' }}><strong>Skills and Technologies</strong></p>
+                    <ul className={styles.skillsList}>
+                        {project.skills.map((skill, id) => (
+                            <li key={id} className={styles.skillItem}>{skill}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>
+
             <div style={{ flex: '50vw' }}></div>
         </div>
     );

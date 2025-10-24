@@ -1,21 +1,23 @@
+/* === Tech Minimalist === */
 :root {
-    /* Backgrounds */
-    --bg-main: #E0F0F8;       /* light icy blue, main background */
-    --bg-section: #D0D6DA;    /* steel silver with blue hint */
-    --bg-card: #B8C7D1;       /* muted bluish steel for cards */
-    --bg-navbar: #CEDFE6;     /* pale metal blue for navbar */
-    --bg-accent: #F5F7FA;     /* bright chrome white */
-    --bg-skill: #A3BACD;      /* soft metallic blue for skill bars */
+  /* Backgrounds */
+  --bg-main: #212121;       /* light gray-white base */
+  --bg-section: #FFFFFF;    /* white sections */
+  --bg-card: #0D7377;       /* cool gray for cards */
+  --bg-navbar: #0284C7;     /* cyan-blue navbar */
+  --bg-accent: #E2E8F0;     /* subtle cool gray borders */
+  --bg-skill: #856eeb;      /* pale blue progress bar */
 
-    /* Text */
-    --text-primary: #1E2A33;  /* dark gunmetal */
-    --text-secondary: #4A6B7A; /* steel blue for secondary text */
+  /* Text */
+  --text-primary: #14FFEC;  /* deep navy text */
+  --text-secondary: #323232; /* softer steel-gray text */
 
-    /* Accent / Highlight */
-    --accent-main: #D85C3C;   /* metallic copper / red for highlights */
-    --accent-hover: #3C8EB8;  /* bright metallic blue for hover states */
+  /* Accent / Highlight */
+  --accent-main: #0284C7;   /* main cyan accent */
+  --accent-hover: #0369A1;  /* darker cyan hover */
 
-    /* Neutral / Utility */
-    --white: #FFFFFF;          /* pure chrome white */
+  /* Neutral / Utility */
+  --white: #FFFFFF;
 }
+
 

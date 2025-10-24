@@ -53,7 +53,7 @@
   background-color: var(--bg-skill);
   border-radius: 8px;
   padding: 5px 10px;
-  min-width: 80px;
+  min-width: 60px;
   text-align: center;
 }
 /* ProjectCarousel.module.css */
