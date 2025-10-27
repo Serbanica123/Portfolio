@@ -6,15 +6,16 @@
 }
 
 .projectCard {
-  flex: 49vw;
   position: relative;
-  padding: 10px;
+  width: 100%;
+  height: 100%;
   background-color: var(--bg-card);
+  max-height: 900px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px 40px;
+gap: 20px;
 }
 
 .projectTitle {
@@ -29,6 +30,7 @@
   align-items: flex-start;
   gap: 20px;
   width: 45vw;
+
 }
 
 .projectDescription {
@@ -45,7 +47,7 @@
   flex-wrap: wrap;
   list-style: none;
   gap: 10px;
-  padding: 0;
+  padding: 20px;
   margin: 0;
 }
 
