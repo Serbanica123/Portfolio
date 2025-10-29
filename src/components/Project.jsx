@@ -6,6 +6,11 @@ const projectImages = {
     "Sample Project": Object.values(import.meta.glob('../assets/Sample Project/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
     "Digital Twin": Object.values(import.meta.glob('../assets/Digital Twin/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
     "Laser Turret": Object.values(import.meta.glob('../assets/Laser Turret/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "Cycloidal Gearbox": Object.values(import.meta.glob('../assets/Cycloidal Gearbox/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "Team Pi": Object.values(import.meta.glob('../assets/Team Pi/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "MultiRotorResearch": Object.values(import.meta.glob('../assets/MultiRotorResearch/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+        "Affix Engineering": Object.values(import.meta.glob('../assets/Affix Engineering/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+                "Affix Mechanical": Object.values(import.meta.glob('../assets/Affix Mechanical/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
 };
 
 const projectVideos = {
@@ -18,6 +23,21 @@ const projectVideos = {
     ).map(mod => mod.default || mod),
     "Laser Turret": Object.values(
         import.meta.glob('../assets/Laser Turret/*.{mp4,webm,ogg}', { eager: true })
+    ).map(mod => mod.default || mod),
+    "Cycloidal Gearbox": Object.values(
+        import.meta.glob('../assets/Cycloidal Gearbox/*.{mp4,webm,ogg}', { eager: true })
+    ).map(mod => mod.default || mod),
+    "Team Pi": Object.values(
+        import.meta.glob('../assets/Team Pi/*.{mp4,webm,ogg}', { eager: true })
+    ).map(mod => mod.default || mod),
+    "MultiRotorResearch": Object.values(
+        import.meta.glob('../assets/MultiRotorResearch/*.{mp4,webm,ogg}', { eager: true })
+    ).map(mod => mod.default || mod),
+        "Affix Engineering": Object.values(
+        import.meta.glob('../assets/Affix Engineering/*.{mp4,webm,ogg}', { eager: true })
+    ).map(mod => mod.default || mod),
+            "Affix Mechanical": Object.values(
+        import.meta.glob('../assets/Affix Mechanical/*.{mp4,webm,ogg}', { eager: true })
     ).map(mod => mod.default || mod),
 };
 
@@ -134,12 +154,11 @@ export default function Project({ project = mockProject }) {
                         {project.video ? (
                             <video
                                 src={project.video}
-                                controls
                                 autoPlay
                                 muted
                                 loop
                                 playsInline
-                                style={{ width: "100%", borderRadius: "12px", margin: '5px 40px', height: '100%'}}
+                                style={{ width: "100%", borderRadius: "12px", margin: '5px 40px', height: "95%" }}
                             />
                         ) : (
                             <p>No video available</p>

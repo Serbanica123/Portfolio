@@ -78,20 +78,11 @@ const projects = [
                     A compact and robust <strong>13:1 reducer</strong> compatible with a wide range of motors and outputs, ready for integration into future robotics platforms requiring high-torque actuation.
                 </p>
             </div>,
-        images: getImages("Sample Project"),
-        video: getVideos("Digital Twin"),
-        link: "#",
-        skills: ["React", "UI", "Test", "Test1", "Test2", "Test3", "Test4", "Test5", "Test6"]
+        images: getImages("Cycloidal Gearbox"),
+        video: getVideos("Cycloidal Gearbox"),
+        link: "",
+        skills: ["SolidWorks", "3D Printing", "Reducers", "Hardware components", "Actuators", "Prototyping"]
     },
-    {
-        title: "Sample Project",
-        description:
-            "This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.This is a sample project to test the card design.",
-        images: getImages("Sample Project"),
-        video: getVideos("Digital Twin"),
-        link: "#",
-        skills: ["React", "UI", "Test", "Test1", "Test2", "Test3", "Test4", "Test5", "Test6"]
-    }
 ];
 
 

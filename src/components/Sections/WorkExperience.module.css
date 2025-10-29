@@ -1,0 +1,11 @@
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Flip every second Project (2nd, 4th, etc.) */
+.projects > div:nth-child(even) {
+  flex-direction: row-reverse;
+}
