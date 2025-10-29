@@ -9,15 +9,15 @@ const projectImages = {
     "Cycloidal Gearbox": Object.values(import.meta.glob('../assets/Cycloidal Gearbox/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
     "Team Pi": Object.values(import.meta.glob('../assets/Team Pi/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
     "MultiRotorResearch": Object.values(import.meta.glob('../assets/MultiRotorResearch/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-        "Affix Engineering": Object.values(import.meta.glob('../assets/Affix Engineering/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-                "Affix Mechanical": Object.values(import.meta.glob('../assets/Affix Mechanical/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "Affix Engineering": Object.values(import.meta.glob('../assets/Affix Engineering/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "Affix Mechanical": Object.values(import.meta.glob('../assets/Affix Mechanical/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
+    "Team Xeo": Object.values(import.meta.glob('../assets/Team Xeo/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
 };
 
 const projectVideos = {
     "Sample Project": Object.values(
         import.meta.glob('../assets/Sample Project/*.{mp4,webm,ogg}', { eager: true })
     ).map(mod => mod.default || mod),
-
     "Digital Twin": Object.values(
         import.meta.glob('../assets/Digital Twin/*.{mp4,webm,ogg}', { eager: true })
     ).map(mod => mod.default || mod),
@@ -33,11 +33,14 @@ const projectVideos = {
     "MultiRotorResearch": Object.values(
         import.meta.glob('../assets/MultiRotorResearch/*.{mp4,webm,ogg}', { eager: true })
     ).map(mod => mod.default || mod),
-        "Affix Engineering": Object.values(
+    "Affix Engineering": Object.values(
         import.meta.glob('../assets/Affix Engineering/*.{mp4,webm,ogg}', { eager: true })
     ).map(mod => mod.default || mod),
-            "Affix Mechanical": Object.values(
+    "Affix Mechanical": Object.values(
         import.meta.glob('../assets/Affix Mechanical/*.{mp4,webm,ogg}', { eager: true })
+    ).map(mod => mod.default || mod),
+    "Team Xeo": Object.values(
+        import.meta.glob('../assets/Team Xeo/*.{mp4,webm,ogg}', { eager: true })
     ).map(mod => mod.default || mod),
 };
 
