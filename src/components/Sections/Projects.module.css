@@ -5,7 +5,8 @@
   align-items: center;
 }
 
-/* Flip every second Project (2nd, 4th, etc.) */
+@media (min-width:480px){
 .projects > div:nth-child(even) {
   flex-direction: row-reverse;
+}
 }

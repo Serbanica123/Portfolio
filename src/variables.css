@@ -1,22 +1,19 @@
-/* === Tech Minimalist === */
+
 :root {
-  /* Backgrounds */
-  --bg-main: #212121;       /* light gray-white base */
-  --bg-section: #FFFFFF;    /* white sections */
-  --bg-card: #0D7377;       /* cool gray for cards */
-  --bg-navbar: #0284C7;     /* cyan-blue navbar */
-  --bg-accent: #E2E8F0;     /* subtle cool gray borders */
-  --bg-skill: #856eeb;      /* pale blue progress bar */
 
-  /* Text */
-  --text-primary: #14FFEC;  /* deep navy text */
-  --text-secondary: #323232; /* softer steel-gray text */
+  --bg-main: #212121;      
+  --bg-section: #FFFFFF;    
+  --bg-card: #0D7377;       
+  --bg-navbar: #0284C7;    
+  --bg-accent: #E2E8F0;    
+  --bg-skill: #856eeb;     
 
-  /* Accent / Highlight */
-  --accent-main: #0284C7;   /* main cyan accent */
-  --accent-hover: #0369A1;  /* darker cyan hover */
+  --text-primary: #14FFEC;  
+  --text-secondary: #323232; 
 
-  /* Neutral / Utility */
+  --accent-main: #0284C7;   
+  --accent-hover: #0369A1;  
+
   --white: #FFFFFF;
 }
 

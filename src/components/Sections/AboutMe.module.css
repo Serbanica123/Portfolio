@@ -1,9 +1,17 @@
 @import '../../variables.css';
 .sectionAbout {
-    display: flex;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
 }
 
+@media (max-width: 500px){
+.sectionAbout{
+    flex-direction: column-reverse;
+}
+
+}
 .profileImg {
     border-radius: 100%;
     border: 10px;
@@ -39,6 +47,7 @@
     list-style: none;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    min-width: 320px;
 }
 
 .aboutText {
@@ -58,4 +67,11 @@
     background-color: var(--bg-card);
     color: var(--text-secondary);
     text-align: center;
+}
+
+.sectionAboutLeft{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
 }

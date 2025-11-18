@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <SectionLine Title="Alexandru Serban" />
       <AboutMe />
       <SectionLine Title="Work Experience" />

@@ -83,23 +83,14 @@ const categorizedSkills = [
   }
 ];
 
-
-const colors = {
-  bar: "rgba(216, 54, 54, 0.603)",
-  title: {
-    text: "#fff",
-    background: "rgba(216, 54, 54, 0.603)"
-  }
-};
-
 function SkillCategoryMinimized({ image, category, skills }) {
   const [hovered, setHovered] = useState(false);
   const sortedSkills = [...skills].sort((a, b) => b.level - a.level)
   const colors = {
-    bar: "rgba(70, 209, 252, 0.98)",
+    bar: "rgba(83, 168, 189, 0.98)",
     title: {
       text: "#fff",
-      background: "rgba(102, 182, 95, 0.85)",
+      background: "#0D7377",
     },
   };
 

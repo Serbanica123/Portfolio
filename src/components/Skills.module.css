@@ -1,60 +1,99 @@
 @import '../variables.css';
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 20%;
+  justify-items: center;
+  align-items: start;
+  flex: 1;
+  gap: 20px;
+}
+
 .categoryContainerMin {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* start from top so content expands downward */
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    width: 23vw;           /* fixed width */
-    min-height: 225px;      /* compact height */
-    max-height: 225px;      /* initial height */
-    padding: 5px;
-    margin: 2px;
+  align-items: center;
 
-    box-shadow: 0 0 6px var(--bg-card), 0 0 12px var(--bg-accent);
-    border-radius: 10px;
-    background-color: var(--bg-card);
-    color: var(--text-secondary);
-    font-size: 20px;
+  width: 23vw;
 
-    transition: max-height 0.4s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    overflow: hidden;       /* hide overflow so content expands inside */
+  min-height: 225px;
+
+  max-height: 225px;
+
+  padding: 5px;
+  margin: 2px;
+
+  box-shadow: 0 0 6px var(--bg-card), 0 0 12px var(--bg-accent);
+  border-radius: 10px;
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 20px;
+
+  transition: max-height 0.4s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+
+}
+
+:global(.skillbar) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+:global(.skillbar-title) {
+  width: auto !important;
+  color: white !important;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+:global(.skillbar-bar) {
+  flex: 1;
+  border-radius: 0 4px 4px 0;
 }
 
 .categoryContainerMin.expanded {
-    max-height: 600px;      /* expanded height (adjust as needed) */
-    background-color: var(--bg-card);
-    box-shadow: 0 0 12px var(--bg-accent);
+  max-height: 600px;
 
-    justify-content: flex-start; /* keep content starting from top */
-    align-items: center;
+  background-color: var(--bg-card);
+  box-shadow: 0 0 12px var(--bg-accent);
+
+  justify-content: flex-start;
+
+  align-items: center;
 }
 
 .categoryImg {
-    width: 100px;     /* fixed width */
-    height: 100px;    /* fixed height */
-    margin-bottom: 10px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    object-fit: contain;
+  width: 100px;
+
+  height: 100px;
+
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  object-fit: contain;
 }
 
 .categoryContainerMin p {
-    display: flex;
-    flex-wrap: wrap;       /* allows skills to wrap nicely */
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
 }
 
-.skillsContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 per row */
-    justify-items: center;
-    align-items: start;
-    width: auto;
-    gap: 20px;             /* spacing between cards */
-}
+
 
 .skillList {
-    width: 100%;
-    margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
 }

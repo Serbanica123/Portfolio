@@ -74,7 +74,7 @@ function ImgCarousel({ images }) {
     const imageNumber = images.length;
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', alignSelf: 'center' }}>
             <div className={styles.carouselContainer}>
                 <img
                     src={images[currentPos]}
@@ -127,10 +127,7 @@ export default function Project({ project = mockProject }) {
                                 )}
                             </p>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
                             <ImgCarousel images={project.images} />
-
-                        </div>
                     </div>
                     <div>
                         <p style={{ marginBottom: '5px' }}><strong>Skills and Technologies</strong></p>
@@ -144,7 +141,7 @@ export default function Project({ project = mockProject }) {
             </div>
 
             <div style={{ flex: '1', margin: '10px' }}>
-                <div className={styles.projectCard}>
+                <div className={styles.projectCard} style={{backgroundColor:"transparent"}}>
                     <div
                         style={{
                             height: '100%',

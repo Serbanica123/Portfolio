@@ -65,9 +65,9 @@ function Profile() {
             </li>
             <li>
                 <div>
-                    <ul style={{listStyle:'none', padding:"0", alignItems: 'center'}}>
-                        <li><h1 style={{fontSize: '30px', textAlign:"center"}}>Open to work</h1></li>
-                        {openToWorkRoles.map((role, id) => (<li style={{display: 'flex', justifyContent: 'center', marginBottom: '10px'}} key={id}><div className={styles.openToWork}>{role}</div></li>))}
+                    <ul style={{ listStyle: 'none', padding: "0", alignItems: 'center' }}>
+                        <li><h1 style={{ fontSize: '30px', textAlign: "center" }}>Open to work</h1></li>
+                        {openToWorkRoles.map((role, id) => (<li style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }} key={id}><div className={styles.openToWork}>{role}</div></li>))}
                     </ul>
                 </div>
             </li>
@@ -78,19 +78,18 @@ function Profile() {
 export default function AboutMe() {
     return (
         <>
-            <section className={styles.sectionAbout} id="about">
-                <div style={{ display: "flex" }}>
-                    <div style={{ flex: '65%' }}>
-                        <ul style={{ listStyle: 'none' }}>
+            <section id="about">
+                <div className={styles.sectionAbout}>
+                    <div className={styles.sectionAboutLeft}>
+                        {/* <ul style={{ listStyle: 'none' }}>
                             <li><AboutText /></li>
                             <li><SkillBars /></li>
-                        </ul>
+                        </ul> */}
+                        <AboutText />
+                        <SkillBars />
                     </div>
-
-                    <Profile style={{ flex: '35%' }} />
+                    <Profile />
                 </div>
-
-
             </section>
         </>
 
