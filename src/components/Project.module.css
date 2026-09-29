@@ -14,8 +14,6 @@
   }
 }
 
-;
-
 .projectCard {
   position: relative;
   width: 100%;
@@ -102,7 +100,7 @@
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
-  font-size: 20;
+  font-size: 20px;
   width: 10px;
   height: 100%;
   color: rgba(216, 54, 54, 0.6);
@@ -124,5 +122,10 @@
 
 .carouselButton:focus {
   outline: none;
-  /* also ensures clicking doesn't show outline */
+  /* no outline on mouse click */
+}
+
+.carouselButton:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
 }

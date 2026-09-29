@@ -1,10 +1,17 @@
 import SkillBar from 'react-skillbars';
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../components/Skills.module.css"
+import programmingIcon from "../assets/Skills Icons/programming.svg";
+import embeddedIcon from "../assets/Skills Icons/embedded.svg";
+import simulationIcon from "../assets/Skills Icons/simulation.svg";
+import cadIcon from "../assets/Skills Icons/cad.svg";
+import mlIcon from "../assets/Skills Icons/ml.svg";
+import softSkillsIcon from "../assets/Skills Icons/soft_skills.svg";
+
 const categorizedSkills = [
   {
     category: "Programming",
-    image: "src/assets/Skills Icons/programming.svg",
+    image: programmingIcon,
     skills: [
       { type: "C++", level: 90 },
       { type: "Python", level: 90 },
@@ -17,7 +24,7 @@ const categorizedSkills = [
   },
   {
     category: "Tools & Frameworks",
-    image: "src/assets/Skills Icons/embedded.svg",
+    image: embeddedIcon,
     skills: [
       { type: "ROS2", level: 90 },
       { type: "Simulink", level: 75 },
@@ -34,7 +41,7 @@ const categorizedSkills = [
   },
   {
     category: "Robotics & Control",
-    image: "src/assets/Skills Icons/simulation.svg",
+    image: simulationIcon,
     skills: [
       { type: "MPC", level: 85 },
       { type: "PID", level: 85 },
@@ -48,7 +55,7 @@ const categorizedSkills = [
   },
   {
     category: "Hardware & CAD",
-    image: "src/assets/Skills Icons/cad.svg",
+    image: cadIcon,
     skills: [
       { type: "SolidWorks", level: 95 },
       { type: "Creo", level: 85 },
@@ -60,7 +67,7 @@ const categorizedSkills = [
   },
   {
     category: "Machine Learning",
-    image: "src/assets/Skills Icons/ml.svg",
+    image: mlIcon,
     skills: [
       { type: "TensorFlow", level: 65 },
       { type: "YOLO", level: 90 },
@@ -71,7 +78,7 @@ const categorizedSkills = [
   },
   {
     category: "Soft Skills",
-    image: "src/assets/Skills Icons/soft_skills.svg",
+    image: softSkillsIcon,
     skills: [
       { type: "Teamwork", level: 90 },
       { type: "Fast Learner", level: 88 },
@@ -120,11 +127,9 @@ export default function SkillBars() {
 
   return (
     <div className={styles.skillsContainer}>
-      {Object.entries(categorizedSkills).map(([category, data]) => {
-        return (
-          <SkillCategoryMinimized key={category} category={category} image={data.image} skills={data.skills} />
-        )
-      })}
+      {categorizedSkills.map(({ category, image, skills }) => (
+        <SkillCategoryMinimized key={category} category={category} image={image} skills={skills} />
+      ))}
     </div>
   );
 }
