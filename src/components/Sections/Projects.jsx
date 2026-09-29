@@ -1,11 +1,11 @@
 import Project from "../Project"
 import styles from "../Sections/Projects.module.css";
-import { getImages, getVideos } from "../Project";
+import { getImages, getVideo } from "../../utils/media";
 
 const projects = [
     {
         title: "Digital twin of Flexible Automated Future Factory(FLUFFY) in Nvidia Isaac Sim",
-        description: <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+        description: <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
             <p>
                 Developed a fully functional <strong>digital twin</strong> of the FLUFFY automated factory system in <strong>NVIDIA Isaac Sim</strong>, built from scratch to serve as a foundation for future <strong>human–robot safety</strong> development and system optimization.
             </p>
@@ -25,13 +25,13 @@ const projects = [
         </div>
         ,
         images: getImages("Digital Twin"),
-        video: getVideos("Digital Twin"),
+        video: getVideo("Digital Twin"),
         link: "https://github.com/Serbanica123/FLUFFY-Digital-Twin",
         skills: ["Python", "Software in the Loop", "Finite State Machine", "Builder Pattern", "Isaac Sim", "Onshape", "CAD", "Pneumatics", "Actuatuors", "PID control", "Linux", "Git"]
     },
     {
         title: "2DOF Laser Turret",
-        description: <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+        description: <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
             <p>
                 Developing a <strong>2DOF laser turret</strong> as a modular platform to experiment with <strong>embedded systems</strong>, <strong>motor control</strong>, <strong>sensor fusion</strong>, <strong>vision</strong>, <strong>position control</strong>, and <strong>machine learning</strong>. <strong>Work in progress</strong>, currently finalizing hardware and electrical assembly.
             </p>
@@ -54,14 +54,14 @@ const projects = [
         </div>
         ,
         images: getImages("Laser Turret"),
-        video: getVideos("Laser Turret"),
+        video: getVideo("Laser Turret"),
         link: "",
         skills: ["C++", "Python", "Linux", "ROS2", "Embedded Systems", "Sensors and Actuators", "BLDC motor", "Encoders", "I2C", "ESP32", "PID Tuning", "FOC control", "Machine Learning", "LQR", "State Space", "System Identification", "Inverse Kinematics", "CAD design", "FDM Printing"]
     },
     {
         title: "Cycloidal Gearbox",
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p>
                     Designed and manufactured a <strong>cycloidal gearbox</strong> as a compact, modular reducer for future robotics projects, aimed at increasing actuator torque.
                 </p>
@@ -79,7 +79,7 @@ const projects = [
                 </p>
             </div>,
         images: getImages("Cycloidal Gearbox"),
-        video: getVideos("Cycloidal Gearbox"),
+        video: getVideo("Cycloidal Gearbox"),
         link: "",
         skills: ["SolidWorks", "3D Printing", "Reducers", "Hardware components", "Actuators", "Prototyping"]
     },

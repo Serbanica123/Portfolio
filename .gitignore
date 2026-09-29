@@ -7,18 +7,64 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# Caches
+.vite/
+.cache/
+.eslintcache
+.prettiercache
+.stylelintcache
+coverage/
+.nyc_output/
+
+# Environment variables / secrets (keep an .env.example if needed)
+.env
+.env.*
+!.env.example
 *.local
+*.pem
+*.key
+
+# Lock files of other package managers (project uses npm / package-lock.json)
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+.yarn/
+.pnp.*
+
+# Deploy tool folders
+.vercel/
+.netlify/
+
+# Claude Code local config (browser preview launch file, local settings)
+.claude/
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+*~
