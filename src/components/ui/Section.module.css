@@ -1,0 +1,27 @@
+.section {
+  padding: 72px 0 8px;
+  scroll-margin-top: var(--navbar-height);
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--text-primary);
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.intro {
+  color: var(--text-muted);
+  margin: 12px 0 0;
+  max-width: 640px;
+}

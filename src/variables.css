@@ -1,20 +1,16 @@
-
 :root {
+  --bg-main: #1c1c1c;       /* page background */
+  --bg-card: #262626;       /* cards and boxes */
+  --bg-card-hover: #2e2e2e; /* cards when the mouse is over them */
+  --bg-teal: #0D7377;       /* buttons, labels, highlights */
+  --bg-skill: #333333;      /* skill tags */
 
-  --bg-main: #212121;      
-  --bg-section: #FFFFFF;    
-  --bg-card: #0D7377;       
-  --bg-navbar: #0284C7;    
-  --bg-accent: #E2E8F0;    
-  --bg-skill: #856eeb;     
+  --text-primary: #ececec;  /* main text */
+  --text-muted: #a3a3a3;    /* small grey text (dates, captions) */
+  --accent: #14FFEC;        /* titles, links, bold words */
 
-  --text-primary: #14FFEC;  
-  --text-secondary: #323232; 
-
-  --accent-main: #0284C7;   
-  --accent-hover: #0369A1;  
-
-  --white: #FFFFFF;
+  --border: #3a3a3a;
+  --radius: 14px;
+  --max-width: 1150px;
+  --navbar-height: 64px;
 }
-
-

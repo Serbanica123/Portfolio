@@ -1,27 +1,43 @@
+import { useEffect } from 'react'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
-import AboutMe from './components/Sections/AboutMe'
-import SectionLine from './components/SectionLine'
-import Experience from './components/Sections/WorkExperience'
-import Contact from './components/Sections/Contact'
-import Projects from './components/Sections/Projects'
-import Hobbies from './components/Sections/Hobbies'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import Home from './pages/Home'
+import ProjectPage from './pages/ProjectPage'
+
+// Scrolls to a section when the link has a #hash (like /#work), otherwise to the top of the page.
+function ScrollManager() {
+  const { pathname, hash, key } = useLocation()
+
+  useEffect(() => {
+    history.scrollRestoration = 'manual'
+  }, [])
+
+  useEffect(() => {
+    if (hash) {
+      document.getElementById(hash.slice(1))?.scrollIntoView()
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+    }
+  }, [pathname, hash, key])
+
+  return null
+}
 
 function App() {
-
   return (
     <>
-      {/* <Navbar /> */}
-      <SectionLine Title="Alexandru Serban" />
-      <AboutMe />
-      <SectionLine Title="Work Experience" />
-      <Experience />
-      <SectionLine Title="Personal Projects" />
-      <Projects />
-      <SectionLine Title="Hobbies" />
-      <Hobbies />
-      <SectionLine Title="Contact" />
-      <Contact />
+      <ScrollManager />
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   )
 }
