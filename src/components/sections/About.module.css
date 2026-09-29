@@ -1,0 +1,32 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.text p {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+}
+
+.openToWork {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.openToWork h3 {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

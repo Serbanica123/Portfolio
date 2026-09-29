@@ -1,0 +1,32 @@
+.box {
+  margin-top: 24px;
+  padding: 40px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  text-align: center;
+}
+
+.text {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.email {
+  display: inline-block;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}

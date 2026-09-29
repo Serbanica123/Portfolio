@@ -1,4 +1,4 @@
-/* Tailwind without its Preflight reset, so the existing CSS Modules keep their look */
+/* Tailwind without its Preflight reset, so the CSS Modules keep full control of the look */
 @layer theme, base, components, utilities;
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
@@ -6,8 +6,8 @@
 @import './variables.css';
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
   color-scheme: dark;
@@ -18,13 +18,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+html {
+  scroll-behavior: smooth;
 }
-a:hover {
-  color: #535bf2;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -32,13 +33,24 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--bg-main);
-  color: var(--text-primary); /* light text for readability */
-  font-family: 'Roboto', sans-serif;
+  color: var(--text-primary);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
 }
 
 button {
@@ -47,6 +59,12 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--text-primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

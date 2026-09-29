@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 80px;
+  border-top: 1px solid var(--border);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.container p {
+  margin: 0;
+}
