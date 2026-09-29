@@ -1,15 +1,15 @@
 import Project from "../Project"
-import { getImages, getVideos } from "../Project";
+import { getImages, getVideo } from "../../utils/media";
 import styles from "../Sections/WorkExperience.module.css";
 const workExperience = [
     {
-        title: <p>
+        title: <>
             <strong>Full-Time Software and Robotics Engineer Intern</strong> at <strong>Affix Engineering</strong>
-            <p className="text-gray-500 text-sm">02/2025 – 07/2025</p>
-        </p>
+            <span className="block text-gray-500 text-sm">02/2025 – 07/2025</span>
+        </>
         ,
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p className="mt-2">
                     Worked on the development of a <strong>universal software and hardware platform</strong> to improve the adaptability of flex feeder systems using <strong>computer vision</strong> and modular robotics.
                 </p>
@@ -29,18 +29,18 @@ const workExperience = [
             </div>
         ,
         images: getImages("Affix Engineering"),
-        video: getVideos("Affix Engineering"),
+        video: getVideo("Affix Engineering"),
         link: "",
         skills: ["Python", "Computer Vision", "YOLO-NAS-S", "Convolutional Autoencoder", "GUI Development", "wxPython", "Dataset Augmentation", "Machine Learning", "Modular Software Design", "Performance Optimization", "Real-Time Detection", "Model Training", "Quality Control", "Robotics Integration", "System Scalability"]
     },
     {
-        title: <p>
+        title: <>
             <strong>Part-Time Mechanical Engineer Intern</strong> at <strong>Affix Engineering</strong>
-            <p className="text-gray-500 text-sm">02/2025 – 07/2025</p>
-        </p>
+            <span className="block text-gray-500 text-sm">02/2025 – 07/2025</span>
+        </>
         ,
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p className="mt-2">
                     Main project: Development of a <strong>magnetic tool changer</strong> for a SCARA robot in a flex feeder system, enabling fast and reliable swapping of end-effector tools.
                 </p>
@@ -66,18 +66,18 @@ const workExperience = [
             </div>
         ,
         images: getImages("Affix Mechanical"),
-        video: getVideos("Affix Mechanical"),
+        video: getVideo("Affix Mechanical"),
         link: "",
         skills: ["Mechatronics Design", "SCARA Robots", "Magnetic Tool Changer", "Kinematic Couplers", "End-Effector Design", "Spring-Loaded Mechanisms", "Mechanical Prototyping", "Precision Alignment", "Tool Swapping Systems", "Robotics Integration", "Force Reduction Mechanisms"]
     },
     {
-        title: <p>
+        title: <>
             <strong>Full-Time Software and Control Engineer Intern</strong> at <strong>MultiRotorResearch</strong>
-            <p className="text-gray-500 text-sm">09/2023 – 02/2024</p>
+            <span className="block text-gray-500 text-sm">09/2023 – 02/2024</span>
 
-        </p>,
+        </>,
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p className="mt-2">
                     Worked on the research and implementation of <strong>trajectory control</strong> for large multi-rotor aerial vehicles using a <strong>Model Predictive Controller (MPC)</strong>.
                 </p>
@@ -99,18 +99,18 @@ const workExperience = [
             </div>
         ,
         images: getImages("MultiRotorResearch"),
-        video: getVideos("MultiRotorResearch"),
+        video: getVideo("MultiRotorResearch"),
         link: "",
         skills: ["Model Predictive Control", "C++", "Python", "Trajectory Planning", "World-to-Body Frame Transformations", "PID Tuning", "Interpolation", "Simulation", "Real-Time Systems", "NVIDIA Jetson", "Drone Control", "Multiprocessing", "Embedded Systems", "Control Theory", "System Integration"]
     },
     {
-        title: <p>
+        title: <>
             <strong>Part-Time Mechatronics Engineer</strong> at <strong>FRC Team Pi 6968</strong>
-            <p className="text-gray-500 text-sm">06/2022 – 07/2023</p>
-        </p>
+            <span className="block text-gray-500 text-sm">06/2022 – 07/2023</span>
+        </>
         ,
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p className="mt-2">
                     Contributed to the design, manufacturing, and programming of advanced robotic systems for the
                     <strong> 2023 FIRST Robotics Competition – Charged Up</strong> season.
@@ -132,19 +132,19 @@ const workExperience = [
                 </p>
             </div>,
         images: getImages("Team Pi"),
-        video: getVideos("Team Pi"),
+        video: getVideo("Team Pi"),
         link: "",
         skills: ["C++", "OOP", "PID tuning", "Pneumatics control", "Inverse Kinematics", "Swerve Drive", "BLDC control", "Sensors and actuators", "State machine", "Prototyping", "Teamwork"]
     },
     {
         title:
-            <p>
+            <>
                 <strong>Mechatronics Engineer</strong> at <strong>FTC Team Xeo 14278</strong>
-                <p className="text-gray-500 text-sm">09/2018 – 02/2021</p>
-            </p>
+                <span className="block text-gray-500 text-sm">09/2018 – 02/2021</span>
+            </>
         ,
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p className="mt-2">
                     Participated in the <strong>FIRST Tech Challenge</strong> as part of <strong>Team Xeo 14278</strong>, contributing to the mechanical design, prototyping, and programming of competitive robots.
                 </p>
@@ -166,18 +166,18 @@ const workExperience = [
             </div>
         ,
         images: getImages("Team Xeo"),
-        video: getVideos("Team Xeo"),
+        video: getVideo("Team Xeo"),
         skills: ["CAD Design", "SolidWorks", "Creo Parametric", "Onshape", "3D Printing", "Swerve Drive", "Prototyping", "Mechanical Design", "Assembly", "Soldering", "Robotics", "Leadership", "Team Collaboration"]
     },
     {
         title:
-            <p>
+            <>
                 <strong>Mechatronics Engineer</strong> at <strong>FTC Team Xeo 14278</strong>
-                <p className="text-gray-500 text-sm">09/2018 – 02/2021</p>
-            </p>
+                <span className="block text-gray-500 text-sm">09/2018 – 02/2021</span>
+            </>
         ,
         description:
-            <div className="max-h-64 overflow-y-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-h-64 overflow-y-auto p-4 rounded-lg shadow">
                 <p className="mt-2">
                     Participated in the <strong>FIRST Tech Challenge</strong> as part of <strong>Team Xeo 14278</strong>, contributing to the mechanical design, prototyping, and programming of competitive robots.
                 </p>
@@ -199,7 +199,7 @@ const workExperience = [
             </div>
         ,
         images: getImages("Team Xeo"),
-        video: getVideos("Team Xeo"),
+        video: getVideo("Team Xeo"),
         skills: ["CAD Design", "SolidWorks", "Creo Parametric", "Onshape", "3D Printing", "Swerve Drive", "Prototyping", "Mechanical Design", "Assembly", "Soldering", "Robotics", "Leadership", "Team Collaboration"]
     }];
 

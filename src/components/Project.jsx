@@ -1,56 +1,5 @@
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import styles from "./Project.module.css";
-
-const projectImages = {
-    "Sample Project": Object.values(import.meta.glob('../assets/Sample Project/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Digital Twin": Object.values(import.meta.glob('../assets/Digital Twin/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Laser Turret": Object.values(import.meta.glob('../assets/Laser Turret/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Cycloidal Gearbox": Object.values(import.meta.glob('../assets/Cycloidal Gearbox/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Team Pi": Object.values(import.meta.glob('../assets/Team Pi/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "MultiRotorResearch": Object.values(import.meta.glob('../assets/MultiRotorResearch/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Affix Engineering": Object.values(import.meta.glob('../assets/Affix Engineering/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Affix Mechanical": Object.values(import.meta.glob('../assets/Affix Mechanical/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-    "Team Xeo": Object.values(import.meta.glob('../assets/Team Xeo/*.{png,jpg,jpeg,svg}', { eager: true })).map(mod => mod.default || mod),
-};
-
-const projectVideos = {
-    "Sample Project": Object.values(
-        import.meta.glob('../assets/Sample Project/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Digital Twin": Object.values(
-        import.meta.glob('../assets/Digital Twin/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Laser Turret": Object.values(
-        import.meta.glob('../assets/Laser Turret/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Cycloidal Gearbox": Object.values(
-        import.meta.glob('../assets/Cycloidal Gearbox/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Team Pi": Object.values(
-        import.meta.glob('../assets/Team Pi/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "MultiRotorResearch": Object.values(
-        import.meta.glob('../assets/MultiRotorResearch/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Affix Engineering": Object.values(
-        import.meta.glob('../assets/Affix Engineering/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Affix Mechanical": Object.values(
-        import.meta.glob('../assets/Affix Mechanical/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-    "Team Xeo": Object.values(
-        import.meta.glob('../assets/Team Xeo/*.{mp4,webm,ogg}', { eager: true })
-    ).map(mod => mod.default || mod),
-};
-
-export function getImages(projectName) {
-    return projectImages[projectName] || [];
-}
-
-export function getVideos(projectName) {
-    return projectVideos[projectName] || [];
-}
 
 function incrementImage(currentPos, imageNumber) {
     return (currentPos + 1 > imageNumber - 1) ? 0 : currentPos + 1;
@@ -60,56 +9,53 @@ function decrementImage(currentPos, imageNumber) {
     return (currentPos - 1 < 0) ? imageNumber - 1 : currentPos - 1;
 }
 
-const mockProject = {
-    title: "Sample Project",
-    description: "This is a sample project to test the card design. ...",
-    images: getImages("Sample Project"),
-    video: getVideos("Digital Twin"),
-    link: "#",
-    skills: ["React", "UI", "Test", "Test1", "Test2", "Test3", "Test4", "Test5", "Test6"]
-};
-
 function ImgCarousel({ images }) {
     const [currentPos, setCurrentPos] = useState(0);
     const imageNumber = images.length;
+
+    if (imageNumber === 0) return null;
+
+    const { src, caption } = images[currentPos];
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', alignSelf: 'center' }}>
             <div className={styles.carouselContainer}>
                 <img
-                    src={images[currentPos]}
-                    alt={`Project ${currentPos}`}
+                    src={src}
+                    alt={caption}
+                    loading="lazy"
                     className={styles.carouselImage}
                 />
-                <button
-                    className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
-                    onClick={() => setCurrentPos(decrementImage(currentPos, imageNumber))}
-                >
-                    ❮
-                </button>
-                <button
-                    className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
-                    onClick={() => setCurrentPos(incrementImage(currentPos, imageNumber))}
-                >
-                    ❯
-                </button>
+                {imageNumber > 1 && (
+                    <>
+                        <button
+                            type="button"
+                            aria-label="Previous image"
+                            className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
+                            onClick={() => setCurrentPos(decrementImage(currentPos, imageNumber))}
+                        >
+                            ❮
+                        </button>
+                        <button
+                            type="button"
+                            aria-label="Next image"
+                            className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
+                            onClick={() => setCurrentPos(incrementImage(currentPos, imageNumber))}
+                        >
+                            ❯
+                        </button>
+                    </>
+                )}
             </div>
             <div style={{ width: '100%', alignItems: 'center' }}>
-                <p>{decodeURIComponent(
-                    images[currentPos]
-                        .split('/')
-                        .pop()
-                        .replace(/\.[^/.]+$/, '')
-                )}</p>
-
+                <p aria-live="polite">{caption}</p>
             </div>
         </div>
 
     );
 }
 
-export default function Project({ project = mockProject }) {
-    console.log("Videos found:", project.video);
+export default function Project({ project }) {
     return (
         <div className={styles.projectContainer}>
             <div style={{ flex: '1', margin: '10px' }}>
@@ -117,7 +63,7 @@ export default function Project({ project = mockProject }) {
                     <h1 className={styles.projectTitle}>{project.title}</h1>
                     <div className={styles.projectContent}>
                         <div style={{ flex: 1 }}>
-                            <p className={styles.projectDescription}>
+                            <div className={styles.projectDescription}>
                                 {project.description}
                                 {project.link && (
                                     <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
@@ -125,7 +71,7 @@ export default function Project({ project = mockProject }) {
                                         Github Page
                                     </a>
                                 )}
-                            </p>
+                            </div>
                         </div>
                             <ImgCarousel images={project.images} />
                     </div>

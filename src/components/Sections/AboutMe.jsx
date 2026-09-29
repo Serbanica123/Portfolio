@@ -1,15 +1,15 @@
-import React from "react";
 import styles from "../Sections/AboutMe.module.css"
 import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import SkillBars from "../Skills";
+import profileImg from "../../assets/ProfilePicture.png";
 const about = {
-    img: "src\\assets\\ProfilePicture.png",
+    img: profileImg,
     description: "",
     links: {
-        linkedin: <a href="https://www.linkedin.com/in/alexandru-serban-b25a31235/"><FaLinkedin /></a>,
-        github: <a href="https://github.com/Serbanica123?tab=repositories"><FaGithub /></a>,
-        facebook: <a href="https://www.facebook.com/alex.serban.1804"><FaFacebookF /></a>,
+        linkedin: <a href="https://www.linkedin.com/in/alexandru-serban-b25a31235/" aria-label="LinkedIn"><FaLinkedin /></a>,
+        github: <a href="https://github.com/Serbanica123?tab=repositories" aria-label="GitHub"><FaGithub /></a>,
+        facebook: <a href="https://www.facebook.com/alex.serban.1804" aria-label="Facebook"><FaFacebookF /></a>,
     }
 }
 
@@ -53,7 +53,7 @@ function Profile() {
         <ul className={styles.mainList}>
             <li >
                 <div>
-                    <img className={styles.profileImg} src={about.img}></img>
+                    <img className={styles.profileImg} src={about.img} alt="Alexandru Serban" />
                 </div>
             </li>
             <li>
